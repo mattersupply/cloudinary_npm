@@ -41,8 +41,7 @@ function execute_request(method, params, auth, api_url, callback) {
   request_options = extend(request_options, {
     method: method,
     headers: {
-      'Content-Type': content_type,
-      'User-Agent': utils.getUserAgent()
+      'Content-Type': content_type
     },
     auth: key + ":" + secret
   });

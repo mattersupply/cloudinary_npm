@@ -538,8 +538,7 @@ function post(url, post_data, boundary, file, callback, options) {
   }
   var post_options = urlLib.parse(url);
   var headers = {
-    'Content-Type': `multipart/form-data; boundary=${boundary}`,
-    'User-Agent': utils.getUserAgent()
+    'Content-Type': `multipart/form-data; boundary=${boundary}`
   };
   if (options.content_range != null) {
     headers['Content-Range'] = options.content_range;
