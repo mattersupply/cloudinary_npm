@@ -529,6 +529,7 @@ function call_api(action, callback, options, get_params) {
 }
 
 function post(url, post_data, boundary, file, callback, options) {
+  console.log('CLOUDINARY post -------------')
   var file_header = void 0;
   var finish_buffer = Buffer.from("--" + boundary + "--", 'ascii');
   if (file != null || options.stream) {
@@ -554,7 +555,7 @@ function post(url, post_data, boundary, file, callback, options) {
     post_options.agent = options.agent;
   }
   var post_request = https.request(post_options, callback);
-  console.log('get headers -------------')
+  console.log('CLOUDINARY get headers -------------')
   console.log(post_request.getHeader('User-Agent'))
   var upload_stream = new UploadStream({ boundary });
   upload_stream.pipe(post_request);
@@ -604,6 +605,7 @@ function encodeFilePart(boundary, type, name, filename) {
 }
 
 exports.direct_upload = function direct_upload(callback_url) {
+  console.log('CLOUDINARY direct_upload -------------')
   var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   var params = build_upload_params(extend({
