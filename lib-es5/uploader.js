@@ -554,6 +554,8 @@ function post(url, post_data, boundary, file, callback, options) {
     post_options.agent = options.agent;
   }
   var post_request = https.request(post_options, callback);
+  console.log('get headers -------------')
+  console.log(post_request.getHeader('User-Agent'))
   var upload_stream = new UploadStream({ boundary });
   upload_stream.pipe(post_request);
   var timeout = false;
