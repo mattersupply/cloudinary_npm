@@ -1,6 +1,6 @@
 {
   "author": "Cloudinary <info@cloudinary.com>",
-  "name": "cloudinary",
+  "name": "@mattersupply/cloudinary",
   "description": "Cloudinary NPM for node.js integration",
   "version": "1.21.0",
   "homepage": "http://cloudinary.com",
