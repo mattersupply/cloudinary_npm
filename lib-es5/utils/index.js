@@ -670,10 +670,6 @@ function url(public_id) {
   utils.patchFetchFormat(options);
   var type = consumeOption(options, "type", null);
   var transformation = utils.generate_transformation_string(options);
-  console.log('CLOUDINARY')
-  console.log('transformation 672:')
-  console.log(transformation)
-
   var resource_type = consumeOption(options, "resource_type", "image");
   var version = consumeOption(options, "version");
   var force_version = consumeOption(options, "force_version", config().force_version);
@@ -745,9 +741,6 @@ function url(public_id) {
   }
 
   transformation = transformation.replace(/([^:])\/\//g, '$1/');
-  console.log('CLOUDINARY')
-  console.log('transformation 744:')
-  console.log(transformation)
 
   if (sign_url && isEmpty(auth_token)) {
     var to_sign = [transformation, source_to_sign].filter(function (part) {
