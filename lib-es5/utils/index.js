@@ -670,6 +670,9 @@ function url(public_id) {
   utils.patchFetchFormat(options);
   var type = consumeOption(options, "type", null);
   var transformation = utils.generate_transformation_string(options);
+  console.log('CLOUDINARY')
+  console.log('transformation:')
+  console.log(transformation)
 
   var resource_type = consumeOption(options, "resource_type", "image");
   var version = consumeOption(options, "version");
